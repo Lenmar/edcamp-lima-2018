@@ -1,0 +1,13 @@
+DROP DATABASE IF EXISTS edcamp_lima;
+
+CREATE DATABASE IF NOT EXISTS edcamp_lima;
+
+USE edcamp_lima;
+
+CREATE TABLE users (
+  user VARCHAR(50) PRIMARY KEY,
+  user_date DATETIME NOT NULL,
+  username VARCHAR(255),
+  email VARCHAR(50) UNIQUE,
+  password VARCHAR(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

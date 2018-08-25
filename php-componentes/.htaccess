@@ -1,0 +1,9 @@
+# Rutas amigables
+
+RewriteEngine On
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^([-a-zA-Z0-9]+)/([-a-zA-Z0-9]+)$ index.php?p=$1&op=$2 [L]
+RewriteRule ^([-a-zA-Z0-9]+)$ index.php?p=$1 [L]
